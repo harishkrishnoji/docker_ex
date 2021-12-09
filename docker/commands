@@ -1,0 +1,12 @@
+# docker run --name hktest python:3.8-slim
+# docker ps
+# docker cp ../compose/logging_test.py hktest:/logging_test.py
+# docker rm hktest
+# 
+# 
+# docker cp log_test.py hktest:/log_test.py
+# docker exec -it hktest bash
+# ============================
+
+docker build -t hk-log-test .
+docker run -it hk-log-test logging_test.py
